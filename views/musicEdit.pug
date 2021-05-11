@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST" action="/music/edit/" + musics._id)
+    .form-group.mt-3
+        label(for='name') Musiqani O'zgaritish
+        input#name.form-control(type='text' name="name" value=musics.name)
+    .form-group
+        label(for='singer') Qo`shiqchini O'zgaritish
+        input#singer.form-control(type='text' name="singer" value=musics.singer)
+    .form-group
+        label(for='comment') Izohni O'zgaritish
+        input#comment.form-control(type='text' name="comment" value=musics.comment) 
+   
+    button.btn.btn-success(type='submit') O'zgaritish
+
+  

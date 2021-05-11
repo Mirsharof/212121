@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1.mb-3.mt-5= title 
+  hr
+  h2 Musiqani nomi  : #{musics.name}
+  hr
+  h2 Qoshiqchi : #{musics.singer}
+  hr
+  h2 Izoh  : #{musics.comment}
+  hr
+  a(href="/music/edit/" + musics._id).mr-5.btn.btn-warning o'zgartirish
+  a(href="/music/delete/" + musics._id).btn.btn-danger o'chirish
+
