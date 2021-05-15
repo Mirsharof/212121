@@ -10,6 +10,7 @@ const musicAddRouter = require('./routes/musicAdd');
 const musicEditRouter = require('./routes/musicEdit');
 const musicRouter = require('./routes/music');
 const deleteRouter = require('./routes/musicDelete');
+const userRouter = require('./routes/user');
 
 const app = express();
 
@@ -76,7 +77,8 @@ app.use('/', indexRouter);
 app.use('/music', musicAddRouter);
 app.use('/music', musicRouter);
 app.use('/music', musicEditRouter);
-app.use('/music',deleteRouter);
+app.use('/music', deleteRouter);
+app.use('/', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST" action="/login")
+    
+    .form-group
+        label(for='username') NIK kiriting
+        input#username.form-control(type='text' name="username" )
+    
+    .form-group
+        label(for='password') Parolingizni kiriting
+        input#password.form-control(type='password' name="password") 
+   
+    button.btn.btn-success(type='submit') Ro'yxatdan o'tish
+
+  
